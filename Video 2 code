@@ -4,7 +4,12 @@ using namespace std;
 int main() {
     // Write C++ code here
     cout << "Hello world!\n";
+    
     int a = 123;
     cout<<a<<endl;
+    
+    // NOT Operator makes the valur FALSE from TRUE and vice versa
+    cout<<endl<<(!a);
+    
     return 0;
 }
