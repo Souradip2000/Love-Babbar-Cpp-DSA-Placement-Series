@@ -32,6 +32,21 @@ int main() {
         cout<<"Lowercase character";
     else if (a>='0' && a<='9')
         cout<<"Number";
+   
+   // Demonstration of while loop
+   
+   int i=1,n;
+  cout<<"Enter the number: ";
+  cin>>n;
+  while(i<=n)
+    {
+      cout<<i<<endl;
+      i++;
+    }
+   
+   // Calculate the sum of the first n natural numbers
+   
+   
     
     return 0;
 }
