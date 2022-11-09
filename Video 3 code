@@ -23,15 +23,14 @@ int main() {
     
     // Program to check if an input is uppercase, lowercase or a number
     
-    int a;
-    cout<<"Enter the value:";
-    cin>>a;
+   cout<<"Enter the value:";
+    int a = cin.get();
     
-    if (a>=67 && a<=90)
-        cout<<"Lowercase character";
-    else if ( a>=97 && a<=122 )
+    if (a>=65 && a<=90)
         cout<<"Uppercase character";
-    else if (a>=0 && a<=9)
+    else if ( a>='A' && a<=122 )
+        cout<<"Lowercase character";
+    else if (a>='0' && a<='9')
         cout<<"Number";
     
     return 0;
