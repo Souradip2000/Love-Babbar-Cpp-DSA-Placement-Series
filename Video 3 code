@@ -1,0 +1,38 @@
+ // Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int main() {
+    /*
+    int a;
+    cin>>a;
+    
+    if(a>0)
+    {
+        cout<<"A is positive.";
+    }
+    else if (a==0)
+        cout<<"A is zero";
+    else 
+        cout<<"A is negative.";
+    
+    
+    int a=cin.get();
+    cout<<"The value of a is: "<<a;
+    */
+    
+    // Program to check if an input is uppercase, lowercase or a number
+    
+    int a;
+    cout<<"Enter the value:";
+    cin>>a;
+    
+    if (a>=67 && a<=90)
+        cout<<"Lowercase character";
+    else if ( a>=97 && a<=122 )
+        cout<<"Uppercase character";
+    else if (a>=0 && a<=9)
+        cout<<"Number";
+    
+    return 0;
+}
