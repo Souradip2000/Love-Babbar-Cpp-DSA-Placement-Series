@@ -93,5 +93,24 @@ int main() {
   if(flag==0)
     cout<<"Prime number.";
     
+     // Code to print the pattern:
+      // ****
+      // ****
+      // ****
+      // ****
+
+  int n;
+  int i=0, j=0;
+  cout<<"Enter the number of lines : ";
+  cin>>n;
+  while(i<=n)
+    {
+      while(j<n)
+        {
+          cout<<"*";
+        }a
+      cout<<endl;
+    }
+    
     return 0;
 }
