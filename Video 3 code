@@ -74,6 +74,24 @@ int main() {
       i++;
     }
   cout<<"The sum of all the even numbers upto n is : "<<sum;
+  
+  // code to find if a number is prime or not
+
+  int number;
+  int flag=0;
+  cout<< "Enter the number to check: ";
+  cin>>number;
+  for(int i=2;i<number;i++)
+    {
+      if(number%i==0)
+      {
+        cout<<"Not a prime number.";
+        flag=1;
+        break;
+      }
+    }
+  if(flag==0)
+    cout<<"Prime number.";
     
     return 0;
 }
