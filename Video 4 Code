@@ -2,5 +2,88 @@
 using namespace std;
 
 int main() {
+  // Code to print the pattern:
+      // 1234
+      // 1234
+      // 1234
+
+  int n;
+  int i=0;
+  cout<<"Enter the number of lines : ";
+  cin>>n;
+
+  while(i<n)
+    {
+      int j=1;
+      while(j<=4)
+        {
+          cout<<j;
+          j+=1;
+        }
+      cout<<endl;
+      i+=1;
+    }
+    
+    // Code to print the following pattern:
+      // 321
+      // 321
+      // 321
+
+  int n;
+  int i=0;
+  cout<<"Enter the number of lines : ";
+  cin>>n;
+
+  for(int i=0;i<n;i++)
+    {
+      for( int j =n; j>0;j--)
+        {
+          cout<<j;
+        }
+      cout<<endl;
+    }  
+    
+    //Code to print the following pattern:
+      // 1 2 3 4 5 
+      // 6 7 8 9 10
+      // 11 12 13 14 15
+      // ......
+  int lines,values;
+  int count=1;
+  
+  cout<<"Enter the number of lines : ";
+  cin>>lines;
+  cout<<"Enter the number of values in each line : ";
+  cin>>values;
+
+  for(int i=0;i<lines;i++)
+    {
+      for(int j=1;j<=values;j++)
+        {
+          cout<<count<<" ";
+          count++;
+        }
+      cout<<endl;
+    }
+    
+    // Code to print the following pattern:
+  // `1
+  // `22
+  // `333
+  // `4444
+  // `55555
+
+  int n;
+  cout<<"Enter the number of lines to print : ";
+  cin>>n;
+
+  for (int i=1;i<=n;i++)
+    {
+      for (int j=1;j<=i;j++)
+        {
+          cout<<i;
+        }
+      cout<<endl;
+    }
   
 }
