@@ -150,6 +150,26 @@ int main() {
         }
       cout<<endl;
     }
+    
+    // Code to print the pattern:
+    // A B C 
+    // D E F
+    // G H I
+
+  int lines,value=1;
+  cout<<"Enter the number of lines to print: ";
+  cin>>lines;
+
+   for(int rows=1; rows<=lines; rows++)
+    {
+      for(int columns=1; columns<=lines; columns++)
+        {
+          cout<<char(64+value)<<" ";
+          value++;
+        }
+      cout<<endl;
+    }
+  
 
   
 }
