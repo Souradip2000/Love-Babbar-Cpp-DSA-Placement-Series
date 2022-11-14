@@ -242,5 +242,30 @@ int main() {
       row++;
       cout<<endl;
     }
+    
+    // Code to print the following pattern:
+  // A B C
+  // B C D
+  // C D E
+
+  int n;
+  cout<<"Enter the  number of lines to print: ";
+  cin>>n;
+
+  int row=1;
+  //char start='A';
+  while(row<=n)
+    {
+      char start='A';
+      int col=1;
+      while(col<=n)
+        {
+          cout<<char(start+row-1)<<" ";
+          start+=1;
+          col++;
+        }
+      cout<<endl;
+      row++;
+    }
   
 }
