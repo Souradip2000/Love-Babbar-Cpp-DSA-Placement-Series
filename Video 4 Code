@@ -290,5 +290,78 @@ int main() {
         }
       cout<<endl;
     }
+    
+    // Code  to print the following pattern: 
+    // ****
+    // ***
+    // **
+    // *
+
+  int n;
+  cout<<"Enter the number of lines to print: ";
+  cin>>n;
+
+  for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n-i+1;j++)
+        {
+          cout<<"*";
+        }
+      cout<<endl;
+    }
+    
+    // Code to print the following pattern:
+  // 1 2 3 4 
+  //   2 3 4
+  //     3 4
+  //       4
+
+  int n;
+  cout<<"Enter the number of lines to print: ";
+  cin>>n;
+
+  for(int i=1;i<=n;i++)
+    {
+      int value=i;
+      for(int k=1;k<=i-1;k++)
+        {
+          cout<<" ";
+        }
+      for(int j=1;j<=n-i+1;j++)
+        {
+          cout<<value;
+          value++;
+        }
+      cout<<endl;
+      
+      // Code to print the following pattern:
+ //    1
+ //   121
+ //  12321
+ // 1234321
+
+  int n;
+  cout<<"Enter the number of lines to print: ";
+  cin>>n;
+
+  for(int i=1;i<=n;i++)
+    {
+      for(int j=1;j<=n-i;j++)
+        {
+          cout<<' ';
+        }
+      for(int k=1;k<=i;k++)
+        {
+          cout<<k;
+        }
+      if(i>=2)
+      {
+        for(int l=i-1;l>=1;l--)
+          {
+            cout<<l;
+          }
+      }
+      cout<<endl;
+    }
   
 }
