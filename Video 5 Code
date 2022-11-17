@@ -5,5 +5,25 @@ using namespace std;
 
 int main()
 {
-  cout<<"Hello world!";
+  int n;
+  cout<<"Enter the number of terms to print: ";
+  cin>>n;
+
+  int f_term=0,s_term=1,r_term;
+   r_term= f_term+ s_term;
+
+  for(int i=1;i<=n;i++)
+    {
+      if(i==1)
+        cout<<f_term<<" ";
+      else if (i==2)
+        cout<<s_term<<" ";
+      else
+      {
+        cout<<r_term<<" ";
+        f_term=s_term;
+        s_term=r_term;
+        r_term= f_term+ s_term;
+      }
+    }
 }
