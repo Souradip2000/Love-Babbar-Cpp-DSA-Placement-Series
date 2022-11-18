@@ -20,5 +20,5 @@ int main() {
     }
   cout<<"The binary representation of the number is: "<<answer;
   
-  return 0;
+  return 1;
 }
