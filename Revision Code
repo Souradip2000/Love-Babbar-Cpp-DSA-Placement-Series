@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+
+// Saturday, 19 Nov
+
+
+   // Code to print the following pattern:
+    // D
+    // C D
+    // B C D
+    // A B C D
+
+  // int n;
+  // cout<<"Enter the number of lines to print: ";
+  // cin>>n;
+
+  // for(int i=1;i<=n;i++)
+  //   {
+  //     int value=0;
+  //     for(int j=1;j<=i;j++)
+  //       {
+  //         cout<<char('A'+n-i+value);
+  //         value++;
+  //       }
+  //     cout<<endl;
+  //   }
+
+  // // Write a function that takes an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
+
+  // unsigned int n, count=0;
+  // cout<<"Enter the number: ";
+  // cin>>n;
+
+  // while(n>0)
+  //   {
+  //     if(n&1)
+  //     {
+  //       count++;
+  //     }
+  //     n>>=1;
+  //   }
+  // cout<<"The number of 1 bits are: "<<count;
+
+
+  return 0;
+}
