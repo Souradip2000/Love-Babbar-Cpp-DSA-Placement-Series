@@ -36,6 +36,34 @@ int main() {
     }
   cout<<"The number of 1 bits are: "<<count;
 
+  // Code to reverse the digits of a number
+
+  int n, answer=0,i=0;
+  cout<<"Enter the number: ";
+  cin>>n;
+
+  while(n!=0)
+    {
+      int digit=n%10;
+      answer= answer*10 + digit;
+      n/=10;
+    }
+  cout<<"The reversed number is : "<<answer;
+  
+  // Code to reverse the bits of an integer
+
+  int n, answer=0,i=0;
+  cout<<"Enter the integer: ";
+  cin>>n;
+
+  while(n!=0)
+    {
+      int bit= n&1;
+      answer = (answer * 10) + bit;
+      n=n>>1;
+      i++;
+    }
+  cout<<"The reversed bit is: "<<answer;
   
   return 0;
 }
