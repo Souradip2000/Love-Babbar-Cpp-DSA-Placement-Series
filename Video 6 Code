@@ -34,7 +34,7 @@ int main() {
       }
       n>>=1;
     }
-  cout<<"The number of 1 bits are: "<<count;
+  cout<<"The number of 1 bits are:  "<<count;
 
   // Code to reverse the digits of a number
 
