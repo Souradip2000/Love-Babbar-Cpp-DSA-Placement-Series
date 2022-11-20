@@ -16,7 +16,7 @@ int main() {
       bit=n&1;
       n>>=1;
       answer+=bit*pow(10,count);
-      count++;
+      count=count+1;
     }
   cout<<"The binary representation of the number is: "<<answer;
   
