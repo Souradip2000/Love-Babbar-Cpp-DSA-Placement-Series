@@ -65,5 +65,5 @@ int main() {
     }
   cout<<"The reversed bit is: "<<answer;
   
-  return 0;
+  return 1;
 }
