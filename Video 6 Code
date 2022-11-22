@@ -89,6 +89,61 @@ int main() {
   // For example, The integer 5 is "101" in binary and its complement is "010" which is the integer 2.
   // Given an integer n, return its complement.
 
+  // Code in 1st attempt
+  
+  class Solution {
+public:
+    int bitwiseComplement(int n) {
+        // store the binary number
+        
+       // {
+            int bin=0, i=0;
+            while(n!=0)
+            {
+                // pow()
+                int remainder = n%2;
+                bin = (remainder * pow(10,i)) + bin;
+                i++;
+                n/=10;
+            }
+       // }
+        
+        // complement the binary number
+        
+        //{
+            int complement = 0, j=0;
+            while( bin!=0)
+            {
+                int bit = bin % 10;
+                if(bit==0)
+                {
+                   complement = (1 * pow(10,i)) + complement;
+                    j++;
+                    bin/=10;
+                }
+                else if (bit==1)
+                {
+                    j++;
+                    bin/=10;
+                }
+            }
+       // }
+        
+        // convert to decimal number
+        
+        int ans=0, k=0;
+        while(complement != 0)
+        {
+            int digit = complement % 10;
+            ans = ans + (digit * pow(2,k));
+            k++;
+            complement/=10;
+        }
+        
+        return ans;
+        
+    }
+};
 
   
   return 0;
