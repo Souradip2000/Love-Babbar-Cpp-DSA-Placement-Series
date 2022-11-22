@@ -86,5 +86,5 @@ int main() {
   cout<<"The number in decimal is: "<<ans;
 
   
-  return 1;
+  return 0;
 }
