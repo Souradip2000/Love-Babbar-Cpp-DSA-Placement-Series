@@ -163,7 +163,25 @@ public:
   
     // Code to complement the binary number
 
+  int complement = 0, j=0;
 
+  while(bin!=0)
+    {
+      int d = bin%10;
+      if(d==0)
+      {
+        complement = ((1 * pow(10,j)) + complement);
+        j++;
+        bin/=10;
+      }
+      else if (d==1)
+      {
+        j++;
+        bin/=10;
+      }
+    }
+
+  cout<<"The complement is: "<<complement;
   
   return 1;
 }
