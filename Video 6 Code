@@ -145,6 +145,10 @@ public:
     }
 };
 
+  // Code to print the binary form in which an integer is stored
+
+
+
   
   return 1;
 }
