@@ -161,7 +161,8 @@ public:
 
   cout<<bin;
   
-  
+    // Code to complement the binary number
+
 
   
   return 1;
