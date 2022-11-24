@@ -23,3 +23,31 @@
       default: "Invalid choice!";
     }
   
+  // Code to find out the number of notes required
+
+  int amount;
+  cout<<"Enter the total amount: ";
+  cin>>amount;
+
+  int denomination;
+  cout<<"Enter the denomination of the note: ";
+  cin>>denomination;
+
+  switch( denomination )
+    {
+      case 100 :cout<<"\nthe number of 100 rupee notes reqd is: "<<amount/100;
+                 amount = amount - (100 * (amount/100));
+
+      case 50  :cout<<"\nthe number of 50 rupee notes reqd is: "<<amount/50;
+                amount = amount - (50 * (amount/50));
+      
+      case 20  :cout<<"\nthe number of 20 rupee notes reqd is: "<<amount/20;
+                amount = amount - (20 * (amount/20));      
+      
+      case 1   :cout<<"\nthe number of 1 rupee notes reqd is: "<<amount/1;
+                break;
+      
+      default: cout<<"\nEnter a valid denominationQ=! ";
+    }
+
+
