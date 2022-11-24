@@ -1,0 +1,25 @@
+  // Code to create a calculator
+
+  int a, b;
+  char op;
+
+  cout<<"Enter the first number: ";
+  cin>>a;
+
+  cout <<"Enter the second number: ";
+  cin>>b;
+
+  cout<<"Enter the operation to perform: ";
+  cin>>op;
+
+  switch( op )
+    {
+      case '1':cout<<(a+b)<<endl;
+             break;
+
+      case '2': cout<<a-b<<endl;
+              break;
+
+      default: "Invalid choice!";
+    }
+  
