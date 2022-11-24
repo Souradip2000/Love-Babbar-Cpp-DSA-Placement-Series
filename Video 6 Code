@@ -183,7 +183,7 @@ public:
 
   cout<<"The complement is: "<<complement;
   
-  // 1009. - My try final code
+  // 1009. - My try final code - 83 / 128 test cases passed
   
   class Solution {
 public:
@@ -243,6 +243,29 @@ public:
 };
 
 // 1009. Actual solution:
+
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int m=n;
+        int mask = 0;
+        
+        if (n==0)
+        {
+            return 1;
+        }
+        
+        while(m!=0)
+        {
+            mask = ( mask << 1 ) | 1;
+            m = m>>1;
+        }
+        
+        int ans = (~n) & mask;
+        
+        return ans;
+    }
+};
   
   return 0;
 }
