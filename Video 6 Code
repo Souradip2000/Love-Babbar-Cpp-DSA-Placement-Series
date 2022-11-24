@@ -183,5 +183,66 @@ public:
 
   cout<<"The complement is: "<<complement;
   
+  // 1009. - My try final code
+  
+  class Solution {
+public:
+    int bitwiseComplement(int n) {
+        // store the binary number
+        
+        long int  bin = 0, i=0;
+
+        while(n!=0)
+        {
+            int bit = n&1;
+            bin = ((bit * pow(10,i)) + bin);
+            i++;
+            n>>=1;
+        }
+
+
+        
+        // complement the binary number
+        
+        long int complement = 0, j=0;
+        if(bin==0)
+        {
+            complement = 1;
+        }
+
+        while(bin!=0)
+        {
+            int d = bin%10;
+            if(d==0)
+            {
+                complement = ((1 * pow(10,j)) + complement);
+                j++;
+                bin/=10;
+            }
+            else if (d==1)
+            {
+                j++;
+                bin/=10;
+            }
+        }
+        
+        // convert to decimal number
+        
+        int ans=0, k=0;
+        while(complement != 0)
+        {
+            int digit = complement % 10;
+            ans = ans + (digit * pow(2,k));
+            k++;
+            complement/=10;
+        }
+        
+        return ans;
+        
+    }
+};
+
+// 1009. Actual solution:
+  
   return 0;
 }
