@@ -101,4 +101,41 @@ bool isEven( int a )
   return 0;
 }
 
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+// Function to calculate factorial
+
+int fact (int n)
+{
+  int fact = 1;
+  for (int i=1; i<=n; i++)
+    {
+      fact *= i;
+    }
+  return fact;
+}
+
+// Function to calculate number of possible combinations
+
+int combinations (int n, int r)
+{
+  return ((fact(n)) / ((fact(r)) * (fact(n-r))));
+}
+
+int main() {
+  
+  // Code to calculate number of possible combinations
+
+  int n,r;
+  cout << "Enter n and r: ";
+  cin >> n >> r;
+
+  cout << "The number of possible combinations are : " << combinations( n, r);
+
+  return 0;
+}
+
 
