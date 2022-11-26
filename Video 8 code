@@ -167,3 +167,28 @@ bool isPrime( int n)
   {
     cout << "Not prime";
   }
+  
+  // Program to demonstrate Pass by Value
+  
+  #include <iostream>
+#include <math.h>
+
+using namespace std;
+
+void dummy(int n)
+{
+  n++;
+  cout << "n is : " << n;
+}
+
+int main() {
+  int n;
+  cout << "Enter the value of n: ";
+  cin >> n;
+
+  dummy(n);
+
+  cout << "\nThe value of n is: " << n;
+
+  return 0;
+}
