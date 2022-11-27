@@ -96,3 +96,51 @@ int main() {
 
   return 0;
 }
+
+
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+// Function to find the minimum element of an array
+int minVal(int arr[], int size)
+{
+  int min = INT8_MAX;
+  for (int i=0; i<size; i++)
+    {
+      if ( arr[i] < min)
+        min = arr[i];
+    }
+  return min;
+}
+
+// Function to find the maximum element of an array
+int maxVal(int arr[], int size)
+{
+  int max = INT8_MIN;
+  for (int i=0; i<size; i++)
+    {
+      if ( arr[i] > max)
+        max = arr[i];
+    }
+  return max;
+}
+
+int main() {
+  int arr[100], n;
+  
+  cout << "Enter the size of the array: ";
+  cin >> n;
+
+  cout << "Enter the elements of the array: ";
+  for (int i=0; i<n; i++)
+    {
+      cin >> arr[i];
+    }
+
+  cout << "\nThe minimum value of the array is: " << minVal( arr, n);
+  cout << "\nThe maximum value of the array is: " << maxVal( arr, n);
+
+  return 0;
+}
