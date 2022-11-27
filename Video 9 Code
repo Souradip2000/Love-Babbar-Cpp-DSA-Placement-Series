@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+void printArray( int arr[])
+{
+  cout << sizeof(arr) << endl;
+  for ( int i=0; i<sizeof(arr); i++)
+    {
+      
+      cout << arr[i] << " ";
+    }
+}
+
+int main() {
+  // Code to demonstrate arrays
+
+  int arr[5] = { 1, 2, 3, 4, 5};
+
+  //arr[0] = 24;
+  //cout << arr[0];
+
+  //arr = { 1, 2, 3, 4, 5};
+
+  //int arr[5] = { [0 . . . 4] = -24};
+
+  // Passing an array to a function
+
+  printArray(arr);
+  
+   // cout << arr[0];
+   //  cout << arr[1];
+   //  cout << arr[2];
+   //  cout << arr[3];
+   //  cout << arr[4];
+
+  return 0;
+}
+
