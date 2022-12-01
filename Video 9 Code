@@ -211,3 +211,21 @@ void reverseArr( int arr[], int size)
   cout << "\nThe reversed array is:  "<< endl;
   printArr(arr,6);
   
+  //Function to reverse an array as in video [using START and END markers]
+void reverseArr( int arr[], int size)
+{
+  int start = 0, end = size-1;
+  int temp = 0;
+
+  while( start <= end)
+    {
+      temp = arr[start];
+      arr[start] = arr[end];
+      arr[end] = temp;
+
+      start++;
+      end--;
+    }
+}
+
+  
