@@ -71,3 +71,43 @@ int main() {
   int arr[5] = {1,2,4,3,4};
   cout << findDuplicate(arr);
 }
+
+
+
+
+
+
+
+
+
+
+//Find the unique element in an array
+
+int findUnique(int *arr, int n)
+{
+    //Write your code here
+    int unique = NULL;
+  for(int i=0; i<n; i++)
+    {
+      int flag = 0;
+      // unique = arr[i];
+      for(int j=0; j<n; j++)
+        {
+          
+          if( i!=j)
+          {
+            if( arr[i] == arr[j])
+            {
+              flag = 1;
+              break;
+            }
+          }
+        }
+      if( flag==0 )
+      {
+        unique = arr[i];
+        break;
+      }
+    }
+  return unique;
+}
