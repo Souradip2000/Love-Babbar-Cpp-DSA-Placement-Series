@@ -307,3 +307,36 @@ vector<vector<int>> pairSum(vector<int> &arr, int s){
     return ans;
     
 }
+
+
+
+
+
+
+
+//Code to find Triplet Sum - Brute Force
+
+#include <iostream>
+#include <bits/stdc++.h> 
+
+using namespace std;
+
+int main() {
+  int arr[6] = {1,2,3,4,5,6};
+  int K = 12;
+  for( int i=0; i<6; i++)
+    {
+        for( int j=i+1; j<6; j++)
+        {
+            for( int k=j+1; k<6; k++)
+            {
+                if( arr[i] + arr[j] + arr[k] == K )
+                {
+                    cout << arr[i] <<" "<<arr[j] <<" "<<arr[k]<<endl;
+                }
+            }
+        }
+    }
+
+  return 0;
+}
