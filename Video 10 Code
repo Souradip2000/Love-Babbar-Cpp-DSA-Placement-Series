@@ -38,5 +38,5 @@ int main() {
   cout << "The alternate elements reversed array is: " << endl;
   printArr(arr, 5);
 
-  return 2;
+  return 3;
 }
