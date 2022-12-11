@@ -10,7 +10,7 @@ void printArr(int arr[], int size)
     {
       cout << arr[i] << " ";
     }
-  cout << endl;
+  cout << endl.<< endl;
 }
 
 // Funciton to reverse alternate elements of an array
