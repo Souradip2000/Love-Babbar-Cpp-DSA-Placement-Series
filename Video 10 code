@@ -561,7 +561,7 @@ bool uniqueOccurrences(vector<int>& arr) {
             }
         }
 
-        return true;
+        return 1;
     }
 
 int main() {
