@@ -43,3 +43,47 @@ int main() {
 
   return 0;
 }
+
+
+
+
+// Revision code for Binary Search  -- 28.12.22
+
+#include <iostream>
+
+using namespace std;
+
+void binarySearch( int arr[], int size, int k )
+{
+  int start = 0;
+  int end = size  - 1;
+  int step = 0;
+
+  int mid = start + (end - start)/2 ;
+
+  while( start <= end )
+    {
+      step++;
+      if( arr[mid] == k )
+      {
+        cout << "Value Found on " << step << " step." << endl;
+        //cout << "Value found!";
+        break;
+      }
+      else if ( arr[mid] < k )
+      {
+        start = mid + 1;
+      }
+      else if ( arr[mid] > k )
+      {
+        end = mid - 1;
+      }
+
+      mid = start + ( end - start )/ 2;
+    }
+}
+
+int main() {
+  int arr[5] = {1,2,3,4,5};
+  binarySearch(arr, 5, 5);
+}
