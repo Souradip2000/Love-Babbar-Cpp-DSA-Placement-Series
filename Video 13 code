@@ -1,0 +1,52 @@
+// 724 - Find Pivot Index -- > 463 test cases passed
+
+
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums) {
+        int start = 0;
+        int end = nums.size() - 1;
+
+        int mid = start + (end - start)/2 ;
+
+        while( start <= end )
+        {
+            int lsum = 0, rsum = 0;
+            for( int i=0; i<mid; i++ )
+            {
+                lsum += nums[i];
+            }
+            for ( int j=mid+1; j<nums.size(); j++ )
+            {
+                rsum += nums[j];
+            }
+
+            if( lsum == rsum )
+            {
+                return mid;
+            }
+            else if ( abs(lsum) < abs(rsum)  )
+            {
+                start = mid + 1;
+            }
+            //  else if ( lsum < rsum && nums[mid] < 0 )
+            // {
+            //     mid -= 1;
+            //     continue;
+            // }
+
+            else if ( lsum > rsum  )
+            {
+                end = mid - 1;
+            }
+            // else if ( lsum > rsum && nums[mid] < 0 )
+            // {
+            //     mid += 1;
+            //     continue;
+            // }
+
+            mid = start + ( end - start )/2 ;
+        }
+        return -1;
+    }
+};
