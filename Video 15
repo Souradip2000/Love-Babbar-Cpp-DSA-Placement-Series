@@ -1,0 +1,65 @@
+#include <bits/stdc++.h> 
+
+// m --> size of the Array
+// n --> no. of days
+
+bool isPossible( vector<int> arr, int n, int m, int mid )
+{
+    //sort(arr.begin(), arr.end());
+    int daysCount = 1;
+    int timeSum = 0;
+    
+    for( int i=0; i<arr.size(); i++ )
+    {
+        if( timeSum + arr[i] <= mid )
+        {
+            timeSum += arr[i];
+        }
+        else
+        {
+            daysCount++;
+            if( daysCount > n || arr[i] > mid )
+            {
+                return false;
+            }
+            timeSum = arr[i];
+        }
+    }
+    
+    return true;
+}
+
+long long ayushGivesNinjatest(int n, int m, vector<int> time) 
+{	
+	// Write your code here.
+    
+    int sum = 0;
+    for ( int i=0; i<time.size(); i++ )
+    {
+        sum += time[i];
+    }
+    
+    int ans = -1;
+    int start = 0;
+    int end = sum;
+    
+    int mid = start + ( end - start) /2 ;
+    
+    while( start <= end )
+    {
+        if( isPossible( time, n, m, mid ) )
+        {
+            ans = mid;
+            end = mid - 1;
+        }
+        else
+        {
+            start = mid + 1;
+        }
+        
+        mid = start + ( end - start ) /2 ;
+    }
+    
+    return ans;
+    
+}
