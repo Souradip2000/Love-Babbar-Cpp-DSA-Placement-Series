@@ -20,5 +20,6 @@ void bubbleSort(vector<int>& arr, int n)
                     //cout<<"The elements after swapping are: "<<arr[j]<<", "<<arr[j+1]<<endl;
                 }
         }
+    //{
     }
 }
