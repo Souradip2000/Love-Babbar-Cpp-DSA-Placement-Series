@@ -1,0 +1,35 @@
+// Invalid code : Code I tried to implement for insertion sort
+
+
+#include <bits/stdc++.h> 
+void insertionSort(int n, vector<int> &arr){
+    // Write your code here.
+    for(int i=1; i<n; i++)
+    {
+        int index = -1;
+        if( arr[i]==1)
+        {
+            if(arr[i]<arr[i-1])
+               { swap(arr[i],arr[i-1]);
+                continue;}
+        }
+        
+        for(int j=i-1; j >= 0; j--) 
+        {
+            if (arr[i] < arr[j])
+            continue;
+            else if (arr[i] > arr[j])
+            index = j + 1;
+        }
+        
+
+        int count = i;
+        for(int j=count-1; j>=index; j--)
+        {
+            int temp = arr[count];
+            arr[count] = arr[j];
+            arr[j] = temp;
+            count--;
+        }
+    }
+}
