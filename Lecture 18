@@ -33,3 +33,23 @@ void insertionSort(int n, vector<int> &arr){
         }
     }
 }
+
+
+// Second try - error
+
+#include <bits/stdc++.h> 
+void insertionSort(int n, vector<int> &arr){
+    // Write your code here.
+    for( int i=1; i<n; i++)
+    {
+        int count = i;
+        for(int j=i-1; j>=0; j--)
+        {
+            if(arr[j] > arr[count])
+                swap(arr[j],arr[count]);
+            if(arr[j]<arr[count])
+                break;
+            count--;
+        }
+    }
+}
