@@ -1,0 +1,14 @@
+189. Rotate array
+
+class Solution {
+public:
+    void rotate(vector<int>& arr, int k) {
+        vector<int> temp(arr.size());
+        for(int i=0; i<arr.size(); i++ )
+        {
+            temp[(i+k)%arr.size()] = arr[i];
+        } 
+        for(int i=0; i<temp.size(); i++)
+            arr[i] = temp[i]; 
+    }
+};
