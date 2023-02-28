@@ -12,3 +12,27 @@ public:
             arr[i] = temp[i]; 
     }
 };
+
+1752 - Check if array is rotated and sorted
+
+class Solution {
+public:
+    bool check(vector<int>& nums) {
+        int count = 0;
+        int n = nums.size();
+
+        for(int i=1; i<n; i++)
+        {
+            if(nums[i] < nums[i-1])
+            {
+                count++;
+                cout<<"count : "<<count<<endl;
+            }
+        }
+        if(nums[n-1] > nums[0])
+            count++;
+        cout<<"Last and first element comparison : "<<count;
+        
+        return (count==1 || count==0);
+    }
+};
