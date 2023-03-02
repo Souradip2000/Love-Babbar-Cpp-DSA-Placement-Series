@@ -1,0 +1,25 @@
+// Program to calculate the length of a string
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char arr[20];
+    cin>>arr;
+    cout<<"\nThe name is: "<<arr<<endl;
+    
+    int count = 0;
+    
+    for( char i : arr)
+    {
+        if(i != '\0')
+            count++;
+        else
+            break;
+    }
+    
+    cout<<endl<<"The length of the string is : "<<count;
+    return 0;
+}
