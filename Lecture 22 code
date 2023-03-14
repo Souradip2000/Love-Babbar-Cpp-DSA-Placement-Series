@@ -40,3 +40,58 @@ public:
         }
     }
 };
+
+
+// Maximum Occuring Character
+
+
+class Solution
+{
+    public:
+    //Function to find the maximum occurring character in a string.
+    char getMaxOccuringChar(string str)
+    {
+        // Conver entire string to Uppercase
+        for(int i=0; i<str.length(); i++)
+        {
+            str[i] = toupper(str[i]);
+        }
+        // Create an array of size 26
+        int arr[26];
+        // Initialise all the elements with zero
+        for(int i=0; i<26; i++)
+            arr[i]=0;
+        // 0th element represents count of 'A' or 'a', 1st element represents count of 'B'/'b' and so on
+        int i=0;
+        while(i<str.length())
+        {
+            int index = str[i] - 'A';
+            arr[index]+=1;
+            i++;
+        }
+
+/*
+        // printing the frequency array
+        cout<<endl;
+        for(int k: arr)
+            cout<<k<<" ";
+        cout<<endl;
+*/        
+        
+        // search array for largest element
+        int max = -1;
+        int pos = -1;
+        for(int j=0; j<26; j++)
+        {
+            if(arr[j]>max)
+            {
+                max=arr[j];
+                pos=j;
+            }
+            //cout<<endl<<"Maximum frequency character is: "<<'A'+max;
+        }
+        return tolower('A'+pos);
+        
+    }
+
+};
