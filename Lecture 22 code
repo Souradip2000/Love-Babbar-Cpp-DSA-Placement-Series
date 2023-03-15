@@ -98,6 +98,8 @@ class Solution
 
 
 // Remove all spaces
+// Time complexity : O(n)
+// Space complexity : O(n) --> because we have declared an empty string which we append depending on the length of the string
 
 #include <bits/stdc++.h> 
 string replaceSpaces(string &str){
@@ -118,3 +120,5 @@ string replaceSpaces(string &str){
 
 	return temp;
 }
+
+// The above problem in space complexity : O(1)
