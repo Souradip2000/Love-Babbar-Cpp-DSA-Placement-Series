@@ -122,3 +122,31 @@ string replaceSpaces(string &str){
 }
 
 // The above problem in space complexity : O(1)
+
+
+
+
+
+// 1910. Remove all occurrences of a sub-string
+
+class Solution {
+public:
+    string removeOccurrences(string s, string part) {
+        // start by removing leftmost occurrence of the sub string
+        // after removing the leftmost occurrence, check again from the begining
+        // if occurrence is removed, continue loop
+        // if entire string is traversed and occurrence not found, breaak from the loop
+
+        // use find function to get the first position of the first occurrence of the sub string
+        // if position found, remove next characters equal to the length of substring
+        // check again 
+        // if not found, break 
+        // return string
+
+        while( s.length()!=0 && s.find(part)<s.length() )     
+        {
+            s.erase(s.find(part), part.length());
+        }   
+        return s;
+    }
+};
