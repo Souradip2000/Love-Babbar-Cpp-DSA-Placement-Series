@@ -96,7 +96,7 @@ class Solution
 
 };
 
-
+// Approach 1
 // Remove all spaces
 // Time complexity : O(n)
 // Space complexity : O(n) --> because we have declared an empty string which we append depending on the length of the string
