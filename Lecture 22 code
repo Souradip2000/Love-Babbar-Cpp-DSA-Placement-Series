@@ -43,6 +43,7 @@ public:
 
 
 // Maximum Occuring Character - Leetcode 
+// Solution 1
 
 
 class Solution
