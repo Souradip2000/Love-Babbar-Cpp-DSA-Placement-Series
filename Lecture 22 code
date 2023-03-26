@@ -190,3 +190,71 @@ public:
         return components - 1;
     }
 };
+
+
+
+// Leetcode - Permutation In a string
+
+class Solution {
+private:
+    bool checkEqual(int a[26], int b[26])
+    {
+        int flag = 0;
+        for(int i=0; i<26; i++)
+        {
+            if(a[i] != b[i])
+            {
+                flag=1;
+                break;
+            }
+        }
+        if(flag==1)
+            return false;
+        else 
+            return true;
+    }
+
+public:
+    bool checkInclusion(string s1, string s2) {
+       // store character count of s1 in an array
+        int ch_count1[26] = {0};
+        for(char i : s1)
+        {
+            int index1 = i-'a';
+            ch_count1[index1]++;
+        }
+
+        // travel s2 string in window of size of length s1 and compare
+        int i=0;
+        int windowSize = s1.length();
+        int ch_count2[26]={0};
+
+        while(i<windowSize && i<s2.length())
+        {
+            int index2 = s2[i] - 'a';
+            ch_count2[index2]++;
+            i++;
+        }
+
+        if(checkEqual(ch_count1, ch_count2))
+            return true;
+        
+        while(i<s2.length())
+        {
+            char newChar = s2[i];
+            int ind1 = newChar - 'a';
+            ch_count2[ind1]++; 
+
+            char oldChar = s2[i-windowSize];
+            int ind2 = oldChar - 'a';
+            ch_count2[ind2]--; 
+
+            i++;
+
+            if(checkEqual(ch_count1, ch_count2))
+                return true;
+        }
+
+        return false;
+    }
+};
