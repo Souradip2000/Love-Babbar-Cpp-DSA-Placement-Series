@@ -262,7 +262,8 @@ public:
 
 
 
-// 567. Permutation in a string
+// 567. Permutation in a string 
+// constant space complexity
 
 class Solution {
 private:
