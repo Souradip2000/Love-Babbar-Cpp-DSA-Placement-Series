@@ -349,4 +349,74 @@ public:
 };
 
 
-// Last question of the video
+// 443. String compression
+
+// solution for the given 3 testcases
+
+class Solution {
+private:
+    void printArr(int arr[26])
+    {
+        cout<<endl<<"Printing array: ";
+        for(int i=0; i<26; i++)
+            cout<<arr[i]<<" ";
+    }
+public:
+    int compress(vector<char>& chars) {
+        // store count of characters in freq array
+
+        int freq[26]={0};
+        for(char ch: chars)
+        {
+            int index=ch-'a';
+            freq[index]++;
+        }
+
+        printArr(freq);
+
+        // modify chars accordingly
+
+        chars.clear();
+
+        for(int i=0; i<26; i++)
+        {
+            if(freq[i]==0)
+                continue;
+            
+            else if(freq[i]==1)
+                chars.push_back('a'+i);
+            
+            else if(freq[i]>10)
+            {
+                int value=freq[i];
+                chars.push_back('a'+i);
+                //while(value>0)
+                //{
+                    int units=value%10;
+                    value/=10;
+                    int tens=value%10;
+
+                    char ct= char(48+tens);
+                    char cu = char(48+units);
+
+                    chars.push_back(ct);
+                    chars.push_back(cu);
+                //}
+            }
+            
+            else
+            {
+                chars.push_back('a'+i);
+                //cout<<endl<<"Freqency of character: "<<freq[i];
+                int value = freq[i];
+                cout<<endl<<"Value of freq: "<<value;
+                char c = char(48+value);
+                cout<<endl<<"Character freq: "<<c;
+                chars.push_back(c);
+            }
+        } 
+
+        int size=chars.size();
+        return size;      
+    }
+};
