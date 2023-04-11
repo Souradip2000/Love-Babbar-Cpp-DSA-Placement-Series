@@ -32,6 +32,8 @@ int main()
 
 // Print like a wave - coding ninjas
 
+// time complexity - O(nm)      --> n- number of rows       --> m- number of cols
+
 #include <bits/stdc++.h> 
 vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
 {
