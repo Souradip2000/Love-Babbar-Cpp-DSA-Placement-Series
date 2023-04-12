@@ -67,3 +67,72 @@ vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
     return ans;
 
 }
+
+
+
+
+
+// 54. Spiral Matrix -- Leetcode
+// Link - https://leetcode.com/problems/spiral-matrix/description/
+
+// time complexity - O(n*m)     --      because we visit every element only once
+
+class Solution {
+public:
+    vector<int> spiralOrder(vector<vector<int>>& matrix) {
+
+       // we need to print first row, last col, last row, first col in a loop
+       // update the first row to the next one after one has been printed
+
+       vector<int> ans;
+
+       int row=matrix.size();
+       int col=matrix[0].size();
+
+       // index initialisation
+       int startingRow =0;
+       int startingCol=0;
+       int endingRow=row-1;
+       int endingCol=col-1;
+
+       int count=0;
+       int totalCount= row*col;
+
+       while(count<totalCount)
+       {
+           // print starting row
+           for(int index=startingCol; count<totalCount && index<=endingCol; index++)
+           {
+               ans.push_back(matrix[startingRow][index]);
+               count++;
+           }
+           startingRow++;
+
+           // print ending column
+           for(int index=startingRow; count<totalCount && index<=endingRow; index++)
+           {
+               ans.push_back(matrix[index][endingCol]);
+               count++;
+           }
+           endingCol--;           
+
+           // print ending row
+           for(int index=endingCol; count<totalCount && index>=startingCol; index--)
+           {
+               ans.push_back(matrix[endingRow][index]);
+               count++;
+           }
+           endingRow--;
+
+           // print starting column
+           for(int index=endingRow; count<totalCount && index>=startingRow; index--)
+           {
+               ans.push_back(matrix[index][startingCol]);
+               count++;
+           }
+           startingCol++;
+       }
+
+    return ans;
+    }
+};
