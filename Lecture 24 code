@@ -28,3 +28,6 @@ public:
 };
 
 // time complexity of the above code : O(n^2))
+
+
+// Sieve of Erastosthenes
