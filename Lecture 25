@@ -1,0 +1,7 @@
+Symbol table: - stores the name of this memory address is this particular variable name, scope and binding info about variables, etc.
+              - maps memory address to corresponding symbol table
+
+
+
+
+
