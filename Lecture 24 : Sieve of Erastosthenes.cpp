@@ -29,7 +29,15 @@ public:
 
 // time complexity of the above code : O(n^2))
 
+
+
+
+
+
+
 // Method 2: Sieve of Erastosthenes
+
+// time complexity : O(n*log(logn) )        // comes from Taylor series : n/2 + n/3 + n/4 + n/5 +... = n( 1/2 + 1/3 + 1/4 + 1/5 + ...) = log(log(n))
 
 class Solution {
 public:
@@ -52,3 +60,37 @@ public:
       return cnt; 
     }
 };
+
+
+
+
+
+
+
+// Iterative code to find GCD
+
+#include <iostream>
+using namespace std;
+
+int gcd(int a, int b){
+    if(a==0)
+        return b;
+    if(b==0)
+        return a;
+    while(a!=b){
+        if(a>b)
+            a-=b;
+        else
+            b-=a;
+    }
+    return a;
+}
+int main()
+{
+    int a,b;
+    cin>>a>>b;
+    int ans=gcd(a,b);
+    cout<<ans;
+    return 0;
+}
+
