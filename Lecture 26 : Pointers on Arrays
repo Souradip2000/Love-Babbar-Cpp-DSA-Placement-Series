@@ -4,3 +4,30 @@
 arr[i] = *(arr+i)
 i[arr] = *(i+arr)  // important
 The above will not give error.
+
+
+Values in symblol table cannot be changed.
+int arr[10] = {0};
+arr = arr+1;  --> ERROR : this cannot happen because values in symbol table cannot be changed
+However pointer type data eg: 
+int *ptr=&a[0];
+ptr = ptr+1;  --> This dosen't give an error
+
+
+When we put a string into a char array, use array of one character more in size.
+This will make space to accomodate the null character present at the end of every string.
+
+cout function is differently implemented for int and char arrays.
+if we say : cout<<arr;  -->int type arr, then it prints the address of the first element of the array
+if we say : cout<<str;  --> then it prints the entire string that has been stored
+
+char ch[6] = "abcde";
+char *p = &ch[0];
+cout<< p;    --> this will print the entire string abcde because implementation is different
+
+char temp = 'z';
+char *p = &temp;
+cout<< p;  --> this will first print z and then keep on printing the next memory blocks until it finds a null character
+
+char ch[6] = "abcde";
+Here first a temporary memory is created
