@@ -1,0 +1,12 @@
+class - user defined data type
+
+object - instance of class
+
+object:  1. properties (data members)
+         2. behaviour  (functions)
+
+If the class has no data members and an object has been created of this class, then the size of the object will be 1 byte.
+
+Access data members using . operator 
+
+By default, access modifiers in a class is private
