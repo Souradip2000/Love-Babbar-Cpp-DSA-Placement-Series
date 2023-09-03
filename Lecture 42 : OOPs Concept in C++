@@ -1,5 +1,13 @@
-class - user defined data type
+OOP - relates code to real life through objects
+this increases readability, managability and extensibility of the code we write
 
+readability         -         code that clearly communicates its intent to the reader
+managability        -         how easily and efficiently a software can be monitored and maintained to keep the system performing, secure and running smoothly
+extensibility       -         the ability of the software system to allow and accept the significant extension of its capabilities without major rewriting of code or changes in its basic architecture
+
+_______________________________________________________________________________________________________________________________________________________________________________________________________
+
+class - user defined data type
 object - instance of class
 
 object:  1. properties (data members)
@@ -7,6 +15,6 @@ object:  1. properties (data members)
 
 If the class has no data members and an object has been created of this class, then the size of the object will be 1 byte.
 
-Access data members using . operator 
+Access data members using '.' dot operator 
 
 By default, access modifiers in a class is private
