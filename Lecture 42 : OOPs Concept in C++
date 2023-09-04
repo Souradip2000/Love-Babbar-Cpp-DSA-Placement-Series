@@ -15,6 +15,16 @@ object:  1. properties (data members)
 
 If the class has no data members and an object has been created of this class, then the size of the object will be 1 byte.
 
+#include "Hero.cpp"
+class has been declared in a different file, which we will be using in the current file
+
 Access data members using '.' dot operator 
 
 By default, access modifiers in a class is private
+Use getters and setters to access private data members in a class.
+Getter and setter can be used to implement password as to who all can get or set the values.
+
+Access modifiers:
+-         public : can be accessed anywhere, outside or inside the class
+-         private : can be accessed only inside the class
+-         protected : 
