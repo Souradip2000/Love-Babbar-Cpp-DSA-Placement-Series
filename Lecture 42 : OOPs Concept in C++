@@ -28,3 +28,41 @@ Access modifiers:
 -         public : can be accessed anywhere, outside or inside the class
 -         private : can be accessed only inside the class
 -         protected : 
+
+Static and Dynamic allocation of memory for object of class:
+class Hero{
+}
+int main(){
+   // static allocation of memory
+         Hero a;
+   // dynamic allocation of memory
+         Hero *a = new Hero;
+   // to access data members of dynamically allocated object memory:
+         cout<< (*b).getHealth();
+   [ use the dereference operator ]
+}
+
+
+
+Constructors:
+It is invoked at the time of object creation.
+whenever we declare
+Hero ramesh;
+a function call takes place ramesh.Hero();
+
+This is called the default constructor:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
