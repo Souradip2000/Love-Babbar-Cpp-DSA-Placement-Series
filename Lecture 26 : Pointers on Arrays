@@ -13,6 +13,8 @@ However pointer type data eg:
 int *ptr=&a[0];
 ptr = ptr+1;  --> This dosen't give an error
 
+// basically we can add numbers to pointers; it will go ahead by that number of memory blocks
+
 
 When we put a string into a char array, use array of one character more in size.
 This will make space to accomodate the null character present at the end of every string.
