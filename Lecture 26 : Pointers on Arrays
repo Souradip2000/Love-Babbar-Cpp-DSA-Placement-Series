@@ -33,3 +33,65 @@ cout<< p;  --> this will first print z and then keep on printing the next memory
 
 char ch[6] = "abcde";
 Here first a temporary memory is created
+
+
+    
+stat1:    char ch[6] = "abcdf";
+          BTS :  a temporary memory is created in which abcdf is stored
+                 then memory for ch[6] is allotted and the abcdf is copied from the temporary memory into the ch memory
+
+stat2:    char *c = "abcde";
+          BTS :  a temporary memory is created in which abcde is stored
+                 then the address of the first element ie. 'a' is stored in the pointer c
+                 This is a very dangerous and is not acceptable.
+As a solution, first write stat1 followed by stat2.
+
+
+
+We can normally pass a pointer to a function by value. A copy of the pointer will be made in the function. Changes done to the copy will not change the 
+value of the pointer outside the function.
+
+Even after passing a pointer to a function by value, we can update the original value at the pointer by using:
+
+void update(int *p){
+  *p = *p + 1;
+}
+
+this will access the value stored at the pointer passed to the function, and then increase that value by 1.
+
+
+
+
+
+
+
+Important concept : 
+
+#include <iostream>
+using namespace std;
+
+int getSum(int *ar, int n){              // here writing *ar is the same as writing arr[], because a pointer is being passed
+    
+    cout<< "Size : " << sizeof(ar)<<endl;    // because ar is a pointer, here the size will be printed as 8
+    int sum=0;
+    for(int i=0; i<n; i++){
+        sum+=ar[i];
+    }
+    return sum;
+}
+int main()
+{
+    int arr[5] = {1,2,3,4,5};
+    cout<<getSum(arr, 5);
+    return 0;
+}
+
+
+This is why it is said that an array is always passed by reference.
+Always a pointer will be passed to the function.
+
+The benefit: we can pass a part of the array
+             for eg. getSum( arr+3 ) will pass a part of the array 
+
+arr[i] = *(arr + i)
+
