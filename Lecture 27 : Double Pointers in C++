@@ -19,3 +19,11 @@ int arr[5];
 cout<< sizeof(arr);    --> prints 20
 
 arr, &arr, &arr[0] - all three are the same
+
+
+
+
+int first = 100;
+int *p = &first;
+int ** q = &p;
+int second = ++(**q);
