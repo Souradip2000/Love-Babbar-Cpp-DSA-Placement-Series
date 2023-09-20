@@ -5,3 +5,10 @@ int *ptr = &i;
 ptr = ptr + 1;    --> this can be done as here we are just increasing the value of the pointer
                       just like we change the value of a variable
                       and not changing the address of the memory block that is named ptr in the symbol table
+
+implementation of char array and integer array is different.
+if we say : cout<< charArr;   --> the entire char array is printed   ( charArr is a pointer to a character array )
+if we say : cout<< intArr;    --> only the first element of the int array is printed    ( intArr is a pointer to an integer array )
+
+whenever we are using a char array to store a string, there is a null character as the last element of the array.
+if we print a pointer to any element in the char array, it keeps printing until it finds the null character.
