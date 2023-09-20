@@ -1,1 +1,7 @@
 arr will always print the address until we write arr[index].
+
+arr = arr + 1;    --> this cannot be done as we cannot update values in the symbol table
+int *ptr = &i;
+ptr = ptr + 1;    --> this can be done as here we are just increasing the value of the pointer
+                      just like we change the value of a variable
+                      and not changing the address of the memory block that is named ptr in the symbol table
