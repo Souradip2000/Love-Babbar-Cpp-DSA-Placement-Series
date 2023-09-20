@@ -1,0 +1,1 @@
+arr will always print the address until we write arr[index].
