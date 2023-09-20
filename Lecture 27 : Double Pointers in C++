@@ -1,0 +1,21 @@
+Symbol table : stores the variable name and the address of the memory block the variable name is given to
+               values in the symbol table can't be changed
+
+int i=5;
+int* ptr = &i;
+int** p = &ptr;
+
+to create a pointer to an int value, we add a star after int
+to create a pointer to a pointer value which in turn is pointing to an int value, we add one more star to the data type i.e. int** p = &ptr;
+
+cout<< ** p ;     // will print 5
+
+after passing a double pointer to a function,
+p2 = p2 + 1;  --> will not change any value   because it is a copy that has been created in the function
+*p2 = *p2 + 1;  --> will change the value of the pointer pointing directly to the int value
+**p2 = **p2 + 1;  --> will change the value of 5 to 6
+
+int arr[5];
+cout<< sizeof(arr);    --> prints 20
+
+arr, &arr, &arr[0] - all three are the same
