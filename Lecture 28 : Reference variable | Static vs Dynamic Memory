@@ -1,0 +1,100 @@
+Reference variable :
+
+int i=5;
+int& j= i;
+
+array size should be known at complile time. declaring the size of the array at run time is a bad practise.
+int n;
+cin>>n;
+int arr[n];    // this is a bad practise
+Reason:
+
+A program when runs is allocated a fixed amount of memory.
+This memory is of two types : Stack and Heap
+Stack memory is allocated in less proportion than heap memory. These memories are allocated during compiletime.
+Thus if we need a to allocate memory for a large size of an array during runtime, there might not be enough stack memory available.
+Therefore, the program will crash.
+
+This can be avoided by :
+int arr[1000];
+
+By doing this, enough memory will be made available for the program during compile time only.
+
+
+when we use stack memory of the program, it is called static memory allocation.
+when we use heap memory, it is called dynamic memory allocation.
+
+to allocate memory on the heap, we need to write : 
+new char;
+Now, we can't give names to the memory allocated on the heap. We just get an address.
+Thus, we create a pointer on the stack, where we store this address.
+We use this pointer to access the memory on the heap.
+
+A pointer type data takes 8 bytes in 64 bit system and 4 bytes in 32 bit system.
+
+To create an array on the heap:
+int* arr = new int[5];
+
+To solve the problem of dynamically allocating an array during runtime, we can use the heap memory to be on the safe side.
+We do it using the above method.
+
+
+while(true){
+  int i=5;
+}
+The above piece of code will not be a problem because:
+  at a point of time we are only using the stack memory for 1 int vairable, i.e. only 4 bytes
+  as the control goes out of scope, the stack memory is cleared
+
+while(ture){
+  int *ptr = new int;
+}
+This above piece of code will crash the program because:
+  every time the variable goes out of scope, memory for the pointer is released
+  but memory allocated on the heap remains
+  and the next time another 4 bytes will get allocated on the heap.
+
+We need to release memory on the heap using 'delete' keyword.
+
+int *a = new int;
+delete a;
+
+int* arr= new int[n];
+delete []arr;
+
+
+
+
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+Implementation:
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int *ptr = new int;
+    *ptr=5;
+    cout<<*ptr<<endl;
+    cout<<ptr<<endl;
+    delete ptr;
+    
+    int *a = new int[4];
+    for(int i=0;i<4;i++){
+        int ele;
+        cin>>ele;
+        a[i]=ele;       // a[i] == *(a+i)
+    }
+    for(int i=0;i<4;i++)   cout<<a[i]<<" ";
+    delete []a;
+    return 0;
+}
