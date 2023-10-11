@@ -12,3 +12,5 @@ if we say : cout<< intArr;    --> only the first element of the int array is pri
 
 whenever we are using a char array to store a string, there is a null character as the last element of the array.
 if we print a pointer to any element in the char array, it keeps printing until it finds the null character.
+
+To return multiple values from a function, 
