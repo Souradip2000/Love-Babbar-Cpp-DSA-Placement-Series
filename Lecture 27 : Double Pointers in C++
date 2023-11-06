@@ -27,3 +27,4 @@ int first = 100;
 int *p = &first;
 int ** q = &p;
 int second = ++(**q);
+cout<<first<<endl<<second;     // output: 101  101
