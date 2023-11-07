@@ -1,0 +1,32 @@
+define keyword - used to define macro variables
+
+#include<iostream> - these are preprocessor directives
+preprocessor directives are declared using '#'
+these are instructions that are referred to before the code is compied
+
+#include<iostream> --> means the iostream code is copied into your code and referred to whenever required during execution of your code
+
+suppose we have written a code over 3 years that has used the value of pi=3.14 in 1000 places.
+now the value needs to be changed.
+it will be inefficienct to change it in every place.
+
+optimised apporach will be to create a variable named pi=3.14 and use it.
+we can just change the variable value when reqd.
+
+the problem here is;
+  -   the variable will take up space which will hamper performance ( very little but >0)
+  -   someone mistakenly changes the value of the variable within the program
+
+Solution:
+
+#define PI 3.14
+We declare a macro 
+
+what is a macro?
+Ans :  It is a piece of code in a program that is replaced by value of macro.
+
+BTS : before compilation, all the places where macro has been used in the program, it will be replaced with the value of macro i.e. 3.14
+
+Advantages :
+   -   no memory used as macro is not a variable that has been defined; it is only a piece of code that gets replaced with its value before compile time
+   -   the value can't be changed during the program; no possibility of error
