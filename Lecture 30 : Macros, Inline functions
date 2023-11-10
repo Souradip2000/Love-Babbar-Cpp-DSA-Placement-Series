@@ -30,3 +30,55 @@ BTS : before compilation, all the places where macro has been used in the progra
 Advantages :
    -   no memory used as macro is not a variable that has been defined; it is only a piece of code that gets replaced with its value before compile time
    -   the value can't be changed during the program; no possibility of error
+
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+
+Global variables : will be accessible to any function
+Don't use; falls under bad practise
+because any function can change its value and that will be a problem to find out.
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+
+
+Inline functions :  used to reduce the function call overhead
+implement using 'inline' keyword
+use if function body is only of one line
+some compilers might work even if function body is of 2-3 lines
+not possible to use inline functions if function body is greater than 3 lines
+
+BTS : function name is replaced with function body where the function is called
+advantages:
+   -   increased readability of code
+   -   no extra space will be alloted for variables in a function
+   -   no extra time required to call a function and return a value from it
+
+adv:
+  1. no extra memory usage
+  2. no function call overhead
+
+When we call a function some time is taken to go the function and then return back to the main function
+                                            +
+some additional memory space might be used by the function call
+
+we can optimise this using inline functions
+
+
+
+__________________________________________________________________________________________________________________________________________________________
+
+
+
+Default Arguements:
+
+initializes arguements by default and there won't be a problem if we don't pass that arguement while the function is called
+Important: all the default arguements must be the rightmost arguements in the function
+
+eg. void print( int arr[], int n, int start=0){}
+
+
+__________________________________________________________________________________________________________________________________________________________
