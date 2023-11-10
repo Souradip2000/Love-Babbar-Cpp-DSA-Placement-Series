@@ -14,3 +14,8 @@ whenever we are using a char array to store a string, there is a null character 
 if we print a pointer to any element in the char array, it keeps printing until it finds the null character.
 
 To return multiple values from a function, 
+
+
+
+-> : use the arrow operator to access the member of a pointer pointing to an object or a struct
+     it is similar to dereferencing the pointer and accessing the members in the object or struct
