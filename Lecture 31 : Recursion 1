@@ -1,0 +1,40 @@
+What is recursion?
+A : When a function calls itself directly or indirectly.
+    directly - the function calls itself within its body only
+    indirectly - the function calls another function that calls the first function within its body
+
+If a big and complex problem's solution depends on a smaller problem of the same type, then we use recursion.
+
+Base case                            Recursive relation                          Processing
+
+If there's no base case, recursive function calls stack up until stack is overflowed and it gives segmentation fault. 
+Return statement is compulsory in base case.
+
+
+
+
+
+
+
+
+
+Two types of Recursion:   In tail recursion recursive relation comes after the processing part and the other way round in the second one.
+
+Type 1: Tail Recursion
+
+function(){
+   base case;
+   processing;
+   recursive relation;
+}
+
+Type 2 : Head Recursion
+
+function(){
+   base case;
+   recursive relation;
+   processing;
+}
+
+
+Using head recursion or tail recursion will change the order in which we print things( processing is done ) during the recursion.
