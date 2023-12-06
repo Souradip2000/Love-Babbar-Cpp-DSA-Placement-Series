@@ -68,3 +68,64 @@ chk for any left elements if both the arrays are not equal in size
 3. copy the contents from the temp array into the original array
 copy at indexes from s to e in original array
 */
+
+
+
+
+
+
+// Merge sort using recursion
+#include<iostream>
+using namespace std;
+
+void merge(int *arr, int s, int e){
+    int mid=s+(e-s)/2;
+    int n=e-s+1;
+    int *temp = new int[n];         // the reason for declaring dynamically allocating memory for the array is 
+    //it will be allocated on the heap memory. during compile time if the size is not known, the compiler 
+    //might not allocate enough stack memory for the program and the program will crash if the size of the array
+    //to be allocated is very big
+    int i=s, j=mid+1;
+    int idx=0;
+    while(i<=mid && j<=e){
+        if(arr[i]<arr[j]){
+            temp[idx++]=arr[i++];
+        }else{
+            temp[idx++]=arr[j++];
+        }
+    }
+    while(i<=mid){
+        temp[idx++]=arr[i++];
+    }
+    while(j<=e){
+        temp[idx++]=arr[j++];
+    }
+    int idx2=s;
+    for(int i=0;i<n;i++){
+        arr[idx2++]=temp[i];
+    }
+    delete [] temp;
+    
+}
+
+void mergeSort(int *arr, int s,  int e){
+    if(s>=e)    return;
+    
+    int mid=s+(e-s)/2;
+    
+    // sort left array
+    mergeSort(arr, s, mid);
+    
+    // sort right array
+    mergeSort(arr, mid+1, e);
+    
+    // merge the two sorted arrays
+    merge(arr, s, e);
+}
+
+int main(){
+    int arr[6]={4,1,5,6,3,2};
+    mergeSort(arr, 0, 5);
+    for(int i: arr) cout<<i<<" ";
+    return 0;
+}
