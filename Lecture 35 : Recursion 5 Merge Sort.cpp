@@ -74,6 +74,55 @@ copy at indexes from s to e in original array
 
 
 
+
+// merge sort
+#include<iostream>
+using namespace std;
+
+void merge(int arr[], int s, int e){
+    int mid=s+(e-s)/2;
+    int i=s, j=mid+1;
+    int temp[e-s+1];
+    int idx=0;
+    while(i<=mid && j<=e){
+        if(arr[i]<arr[j])   temp[idx++]=arr[i++];
+        else                temp[idx++]=arr[j++];
+    }
+    while(i<=mid){
+        temp[idx++]=arr[i++];
+    }
+    while(j<=e){
+        temp[idx++]=arr[j++];
+    }
+    int len=sizeof(temp)/sizeof(arr[0]);
+    for(int i=0;i<len;i++){
+        arr[s+i]=temp[i];
+    }
+}
+
+void mergeSort(int arr[], int s, int e){
+    // base case
+    if(s>=e)    return;
+    
+    int mid=s+(e-s)/2;
+    // sort the left part
+    mergeSort(arr, s, mid);
+    
+    // sort the right part
+    mergeSort(arr, mid+1, e);
+    
+    merge(arr, s, e);
+}
+
+int main(){
+    int arr[6]={3,1,6,4,2,5};
+    mergeSort(arr, 0, 5);
+    for(int i: arr)     cout<<i<<" ";
+    return 0;
+}
+
+
+
 // Merge sort using recursion
 #include<iostream>
 using namespace std;
