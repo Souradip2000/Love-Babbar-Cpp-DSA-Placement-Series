@@ -19,3 +19,8 @@ To return multiple values from a function,
 
 -> : use the arrow operator to access the member of a pointer pointing to an object or a struct
      it is similar to dereferencing the pointer and accessing the members in the object or struct
+
+
+
+
+While calculating exponent using a for loop, we can use mod at every step of the multiplication so that the value dosen't go out of bounds.
