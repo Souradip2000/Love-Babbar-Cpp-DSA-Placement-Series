@@ -1,0 +1,66 @@
+Sliding Window Technique approach will reduce the time complexity for some questions on arrays and strings
+that has been solved using burte force technique.
+
+There are two types of problems:
+
+1.  Fixed Window : find the maximum sum of elements in subarray of size (window size) k
+2.  Two Pointer( window size not fixed) : example - find all subarrays with sum equal to k
+
+[ fixed window size type problems sometimes might use dequeue/ LL etc. ]
+
+[ sub arrays should be continuous ]
+
+ Question 1 : 
+Find all subarrays whose sum is exactly equal to k.
+ex: Array: [ 1,3,2,2,3,1,5,4]
+indexes      0 1 2 3 4 5 6 7
+valid solutions: index       sum
+                 0->1         4
+                 2->3         4
+                 4->5         4
+                 7->7         4
+
+
+Brute force solution :
+
+// find the count of all sub-arrays with sum equal to k
+#include<iostream>
+using namespace std;
+
+// find all the sub-arrays : O(n^2)
+// find the sum : O(n)
+
+int main(){
+   int arr[]= {1,3,2,2,3,1,6,4};
+   
+   int cnt=0;
+   int n=sizeof(arr)/sizeof(arr[0]);
+   for(int i=0;i<n;i++){
+       for(int j=i+1;j<n;j++){
+           int sum=0;
+           for(int k=i;k<=j;k++){
+               sum+=arr[k];
+           }
+           if(sum==4)   cnt++;
+       }
+   }
+   if(arr[n-1]==4)  cnt++;
+   cout<<cnt;
+   return 0;
+}
+
+
+// optimised solution using prefix sum
+
+
+
+
+
+
+
+
+
+
+
+
+
