@@ -1,0 +1,11 @@
+L.C. - Permutations problem
+
+Approach: 
+
+iterate over the nums array with index
+from index, swap every element till the end with the index position
+recursive call
+backtracking
+
+idea is to swap every element to the right with the index position
+(place every element at the index position once)
