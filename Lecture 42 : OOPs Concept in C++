@@ -20,7 +20,7 @@ class has been declared in a different file, which we will be using in the curre
 
 Access data members using '.' dot operator 
 
-By default, access modifiers in a class is private
+By default, access modifiers in a class are private
 Use getters and setters to access private data members in a class.
 Getter and setter can be used to implement password as to who all can get or set the values.
 
@@ -28,6 +28,8 @@ Access modifiers:
 -         public : can be accessed anywhere, outside or inside the class
 -         private : can be accessed only inside the class
 -         protected : 
+
+If we use : sizeof(Hero); --> 8 because of padding and greedly alignment
 
 Static and Dynamic allocation of memory for object of class:
 class Hero{
@@ -40,20 +42,34 @@ int main(){
    // to access data members of dynamically allocated object memory:
          cout<< (*b).getHealth();
    [ use the dereference operator ]
+         cout<< b->getHealth();
 }
+
+If the object has been dynamically allocated, then we can use the arrow -> operator on the pointer to the object 
+to access one of the data members or member functions.
+Other way is to dereference using * and then use the dot (.) operator.
+
 
 
 
 Constructors:
-It is invoked at the time of object creation.
+ - It is invoked at the time of object creation.
 whenever we declare
 Hero ramesh;
 a function call takes place ramesh.Hero();
 
 This is called the default constructor:
 
+Default constructors : 
+         -  invoked at the time of object creation
+         -  has no return type
+         - dosen't require any parameters
+This will be invoked irrespective of static or dynamic allocation of memory.
 
 
+
+
+this keyword
 
 
 
