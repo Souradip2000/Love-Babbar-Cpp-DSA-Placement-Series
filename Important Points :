@@ -24,3 +24,6 @@ To return multiple values from a function,
 
 
 While calculating exponent using a for loop, we can use mod at every step of the multiplication so that the value dosen't go out of bounds.
+
+Use a semi-colon after declaring a class.
+We can use a class defined in another file by including it : #include "hero.cpp"
