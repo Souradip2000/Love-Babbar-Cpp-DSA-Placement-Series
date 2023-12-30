@@ -1,0 +1,92 @@
+What is time complexity?
+It is the time taken by a program to run as a function of its input size. f(n) 
+
+How to find time complextiy of a function?
+A : Method 1 : check each block in the program, then write down a relation as demonstrated below.
+               add the equations, remove the constants and get the final result.
+    Method 2 : Draw the recursion tree.
+
+Program to find the factorial using recursion:
+
+fact(n)
+
+int fact(int n){
+  if(n==0)  return 1;
+  return n*fact(n-1);
+}
+
+Make a relation : T(n)   =   n   + T(n-1)
+                  T(n-1) = (n-1) + T(n-2)
+                  T(n-2) = (n-2) + T(n-3)
+                  T(n-3) = (n-3) + T(n-4)
+                   ....
+                  T(1) =     1   + T(0)
+After adding all of these relations to get the total time reqd., T(n-1) will get cancelled off by the same in the next step and so on
+Resultant equation : T(n) = nk + k
+We ignore the constants k, thus the answer is T(n) = O(n).
+
+Time complexity of BS : O(log n)
+Time complexity of merge sort : O(nlogn)
+Time complexity of findiing nth term of Fibonacci sequence using recursion : O(2^n) [Exponential]
+  because the recursion tree of this function will look like a binary tree
+  from each function call there will be two more function calls : fib(n-1) + fib(n-2)
+Every step will have nodes equal to 2^n.
+
+
+
+
+
+
+
+______________________________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+What is space complexity?
+space used by program to run as a function of the input size 
+but the function might get too complex. thus forming a relation for it might be very difficult.
+
+Thus we can also define space complexity as:
+The maximum space reqd by the program at any instant of time.
+
+
+Space complexity of factorial program using recursion : O(n)
+because there will be n recursive calls stored in the stack
+
+Space complexity of binary search program using recursion : O(logn)
+Space complexity of recursive merge sort : O(n)
+  mathematical expression is : klogn + n; logn is very small compared to n; thus we approximate it to be n
+  log n is from the dividing of arrays into halves each time
+  n comes from the fact that a new temporary array is created each time to sort the elements and then deleted
+  so taking into account the maximum space allocated for the temp array, k(n) will be added to 
+
+Space complexity for fibonacci sequence using recursive function : O(n)
+  we have to draw the recursion tree
+  the first call for the first step will go upto a depth of n steps
+  the second call of the first step will go upto n/2 depths
+  since the first recursion call will first end, therefore at any moment the maximum stack space required to store recursion calls will be n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
