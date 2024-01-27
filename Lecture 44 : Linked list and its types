@@ -1,3 +1,9 @@
+Linked list is a type of DS that is a collection of nodes.
+
+Adv:
+- dynamic ds : grow and shrink in runtime
+- easy insertion and deletion : in arrays we would have to shift all the elements; we don't need to do it in ll
+
 types:
 1. singly ll
 2. doubly ll
