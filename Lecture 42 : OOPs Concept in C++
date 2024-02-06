@@ -13,7 +13,8 @@ object - instance of class
 object:  1. properties (data members)
          2. behaviour  (functions)
 
-If the class has no data members and an object has been created of this class, then the size of the object will be 1 byte.
+If the class has no data members and "an object has been created" of this class, then the size of the object will be 1 byte.
+Otherwise if no object has been created, then the class definition will take 0 bytes of memory.
 
 #include "Hero.cpp"
 class has been declared in a different file, which we will be using in the current file
@@ -29,21 +30,45 @@ Access modifiers:
 -         private : can be accessed only inside the class
 -         protected : 
 
-If we use : sizeof(Hero); --> 8 because of padding and greedly alignment
+If we use : sizeof(Hero); --> 8 because of 1.padding and 2.greedly alignment
+
 
 Static and Dynamic allocation of memory for object of class:
+#include<iostream>
+using namespace std;
+
 class Hero{
-}
+    private:
+        int health;
+    public:
+        char level;
+        int getHealth(){
+            return health;
+        }
+        void setHealth(int x){
+            health=x;
+        }
+};
+
 int main(){
-   // static allocation of memory
-         Hero a;
-   // dynamic allocation of memory
-         Hero *a = new Hero;
-   // to access data members of dynamically allocated object memory:
-         cout<< (*b).getHealth();
-   [ use the dereference operator ]
-         cout<< b->getHealth();
+    Hero ramesh;
+    // we use the dot operator to access the data members and member functions of the object
+    ramesh.setHealth(70);
+    ramesh.level='A';
+    cout<<ramesh.getHealth()<<endl;
+    cout<<ramesh.level<<endl;
+    
+    // for a dynamically allocated object, we use the -> operator
+    // it first dereferences the pointer, and then uses the function of the dot operator
+    Hero *h1 = new Hero;
+    h1->setHealth(50);
+    h1->level='B';
+    cout<<h1->getHealth()<<endl;
+    cout<<h1->level<<endl;
+    cout<<(*h1).level;
+    return 0;
 }
+
 
 If the object has been dynamically allocated, then we can use the arrow -> operator on the pointer to the object 
 to access one of the data members or member functions.
